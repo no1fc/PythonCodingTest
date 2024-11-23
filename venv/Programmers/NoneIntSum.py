@@ -27,11 +27,8 @@ numbers	result
 """
 
 def solution(numbers):
-    answer = -1
     #0~9 정수를 담은 배열을 받습니다.
     #받은 배열에 없는 수가 있다면 값을 더해줍니다.
-    # answer = sum([i for i in numbers if [0-9]])
-
     return sum([num for num in list(range(10)) if num not in numbers])
 
 print(solution([1,2,3,4,6,7,8,0]))
