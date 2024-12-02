@@ -14,7 +14,7 @@ plt.rc('font', family=fontName)
 def dateType(arr):
     return pd.to_datetime(arr)
 
-file_path = "csvFile/"
+file_path = "csvFile/09/"
 koreanPancakeCSVArr = [file_path+"2021_부침개_네이버_일간검색트렌드.csv",file_path+"2022_부침개_네이버_일간검색트렌드.csv"
     ,file_path+"2023_부침개_네이버_일간검색트렌드.csv",file_path+"2024_부침개_네이버_일간검색트렌드.csv"]
 
@@ -24,7 +24,7 @@ koreanPancakeArr2023 = []
 koreanPancakeArr2024 = []
 koreanPancakeArr = [koreanPancakeArr2021,koreanPancakeArr2022,koreanPancakeArr2023,koreanPancakeArr2024]
 
-weatherCSVArr = "csvFile/기상청_강수량.csv"
+weatherCSVArr = "csvFile/09/기상청_강수량.csv"
 yearArr = ['2021','2022','2023','2024']
 
 #window 공공데이터 csv 파일은 cp949 or enc-kr 이기때문에
