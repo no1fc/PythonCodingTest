@@ -17,8 +17,6 @@ def resource_path(relative_path):
 
     return os.path.join(base_path, relative_path)
 
-# ToyProject.py에서
-fontPath = resource_path("font/Freesentation-9Black.ttf")
 #================= plot 폰트설정 시작 ============================
 # 그래프 마이너스 기호 깨짐을 방지하기 위해 설정
 # matplotlib에 - 기호는 유니코드로 되어 있기에 깨짐이 발생할 수 있어 false로 지정
@@ -31,13 +29,6 @@ fontName = fm.FontProperties(fname=fontPath).get_name()
 plt.rc('font', family=fontName)
 #================== plot 폰트 설정 끝 ============================
 
-################### 검색량 배열 생성 ###################
-koreanPancakeArr2021 = []
-koreanPancakeArr2022 = []
-koreanPancakeArr2023 = []
-koreanPancakeArr2024 = []
-koreanPancakeArr = [koreanPancakeArr2021,koreanPancakeArr2022,koreanPancakeArr2023,koreanPancakeArr2024]
-
 #===================== 날짜 변환 함수 시작 ========================
 #str 타입 날짜 데이터를 date 타입으로 변환하는 함수
 def dateType(arr):
@@ -45,6 +36,14 @@ def dateType(arr):
 #===================== 날짜 변환 함수 끝 =========================
 
 def plotKoreanPancake(koreanPancakeCSVArr,weatherArr,yearDate):
+
+    ################### 검색량 배열 생성 ###################
+    koreanPancakeArr2021 = []
+    koreanPancakeArr2022 = []
+    koreanPancakeArr2023 = []
+    koreanPancakeArr2024 = []
+    koreanPancakeArr = [koreanPancakeArr2021,koreanPancakeArr2022,koreanPancakeArr2023,koreanPancakeArr2024]
+
     #================ 데이터 타입 날짜로 변경 시작 ===================
     ################### 기상청 날짜, date Type로 변환 ###################
     weatherArr['일시'] = dateType(weatherArr['일시'])
