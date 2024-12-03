@@ -29,12 +29,9 @@ weatherArr09 = pandasDataFrame(file_path)
 #================= 날짜 배열 생성 시작 =================
 yearDate = [2021,2022,2023,2024]
 #================= 날짜 배열 생성 끝 ===================
-print(yearDate)
-print(koreanPancakeCSVArr07)
-print(koreanPancakeCSVArr09)
+
 ToyProject1.plotKoreanPancake(koreanPancakeCSVArr07,weatherArr07,yearDate)
 ToyProject1.plotKoreanPancake(koreanPancakeCSVArr09,weatherArr09,yearDate)
-print(weatherArr07)
-print(weatherArr09)
 # 그래프 출력
 plt.show()
+plt.close()
